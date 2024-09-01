@@ -41,7 +41,7 @@ const BannerSlider = () => {
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${currentBanner === index ? 'opacity-100' : 'opacity-0'}`}
                     />
                 ))} */}
-                <img src="/src/assets/images/collage-different-professional-sportsmen-fit-men-women-action-motion-isolated-white-background-made-7-models-concept-sport-achievements-competition-championship_489646-6240.avif" alt="" />
+                <img src="src/assets/images/collage.avif" alt="" />
             </div>  
             <div className="flex flex-col justify-center items-start w-1/2 h-[500px] bg-white rounded-xl m-4 p-4 text-left bg-slate-100" style={{ marginTop: '6rem', marginLeft: '2rem' }}>
                 <h2 className="text-2xl font-bold text-4xl text-gray-700 mb-4">FIND PLAYERS & VENUES NEARBY</h2>
