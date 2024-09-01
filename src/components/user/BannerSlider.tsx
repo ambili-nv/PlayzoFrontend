@@ -66,7 +66,7 @@ const BannerSlider = () => {
             <div className="relative w-full max-w-2xl h-[400px] flex flex-col justify-center items-center text-center bg-white bg-opacity-80 rounded-lg p-6 shadow-lg">
                 <h2 className="text-4xl font-bold text-gray-700 mb-4">FIND PLAYERS & VENUES NEARBY</h2>
                 <p className="text-lg text-gray-600 mb-4">Seamlessly explore sports venues and play with sports enthusiasts just like you!</p>
-                <button className="bg-indigo-600 text-white px-5 py-2 rounded-full text-md shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out">
+                <button className="bg-green-600 text-white px-5 py-2 rounded-full text-md shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
                     Get Started
                 </button>
             </div>
