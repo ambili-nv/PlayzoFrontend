@@ -3,17 +3,20 @@ import '../../assets/images/b1.avif'
 import '../../assets/images/b2.avif'
 import '../../assets/images/b3.avif'
 import '../../assets/images/b4.jpg'
+import '../../assets/images/collage-different-professional-sportsmen-fit-men-women-action-motion-isolated-white-background-made-7-models-concept-sport-achievements-competition-championship_489646-6240.avif'
 
 const BannerSlider = () => {
     const banners = [
-        // '/src/assets/images/b1.avif',
-        // '/src/assets/images/b2.avif',
-        // '/src/assets/images/b3.avif',
-        // '/src/assets/images/b4.jpg'
-        '../../assets/images/b1.avif',
-        '../../assets/images/b2.avif',
-        '../../assets/images/b3.avif',
-        '../../assets/images/b4.jpg'
+        '/src/assets/images/b1.avif',
+        '/src/assets/images/b2.avif',
+        '/src/assets/images/b3.avif',
+        '/src/assets/images/b4.jpg'
+
+
+        // '../../assets/images/b1.avif',
+        // '../../assets/images/b2.avif',
+        // '../../assets/images/b3.avif',
+        // '../../assets/images/b4.jpg'
         
     ];
 
@@ -30,14 +33,15 @@ const BannerSlider = () => {
     return (
             <div className=' flex'>
             <div className="relative w-1/2 h-[500px] overflow-hidden rounded-xl" style={{ marginTop: '7rem', marginLeft:'2rem'}}> 
-                {banners.map((banner, index) => (
+                {/* {banners.map((banner, index) => (
                     <img
                         key={index}
                         src={banner}
                         alt={`Banner ${index + 1}`}
                         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${currentBanner === index ? 'opacity-100' : 'opacity-0'}`}
                     />
-                ))}
+                ))} */}
+                <img src="/src/assets/images/collage-different-professional-sportsmen-fit-men-women-action-motion-isolated-white-background-made-7-models-concept-sport-achievements-competition-championship_489646-6240.avif" alt="" />
             </div>  
             <div className="flex flex-col justify-center items-start w-1/2 h-[500px] bg-white rounded-xl m-4 p-4 text-left bg-slate-100" style={{ marginTop: '6rem', marginLeft: '2rem' }}>
                 <h2 className="text-2xl font-bold text-4xl text-gray-700 mb-4">FIND PLAYERS & VENUES NEARBY</h2>
