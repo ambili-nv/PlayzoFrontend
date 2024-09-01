@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import '../../assets/images/b1.avif'
+import '../../assets/images/b2.avif'
+import '../../assets/images/b3.avif'
+import '../../assets/images/b4.jpg'
 
 const BannerSlider = () => {
     const banners = [
-        '/src/assets/images/b1.avif',
-        '/src/assets/images/b2.avif',
-        '/src/assets/images/b3.avif',
-        '/src/assets/images/b4.jpg'
+        // '/src/assets/images/b1.avif',
+        // '/src/assets/images/b2.avif',
+        // '/src/assets/images/b3.avif',
+        // '/src/assets/images/b4.jpg'
+        '../../assets/images/b1.avif',
+        '../../assets/images/b2.avif',
+        '../../assets/images/b3.avif',
+        '../../assets/images/b4.jpg'
+        
     ];
 
     const [currentBanner, setCurrentBanner] = useState(0);
