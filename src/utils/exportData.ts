@@ -23,8 +23,8 @@ export function ownerBookingPdfGenerator(
     const tableData = data.map((d, i) => [
       i + 1,
       d._id, // Booking ID
-      d.userId.name, // User Name
-      d.venueId.name, // Venue Name
+      d.userId?.name, // User Name
+      d.venueId?.name, // Venue Name
       d.venueId.sportsitem,
       d.date, // Date
       `${d.startTime} - ${d.endTime}`, // Slot Time
