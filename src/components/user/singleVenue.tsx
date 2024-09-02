@@ -106,7 +106,7 @@ const VenuePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md space-y-4">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800">{venue.name}</h2>
+                <h2 className="text-3xl font-bold text-gray-800">{venue?.name}</h2>
               </div>
               <div className="border rounded p-4">
                 <p className="text-lg font-semibold">Sport</p>
@@ -158,7 +158,7 @@ const VenuePage: React.FC = () => {
                 <div>
                   <StarRating rating={ratings[currentRatingIndex].rating} />
                   <p className="text-base mt-1 text-slate-600">{ratings[currentRatingIndex].comment}</p>
-                  <p className="text-sm text-gray-500">- {ratings[currentRatingIndex].userId.name}</p>
+                  <p className="text-sm text-gray-500">- {ratings[currentRatingIndex].userId?.name}</p>
                 </div>
               ) : (
                 <p>No ratings available.</p>
