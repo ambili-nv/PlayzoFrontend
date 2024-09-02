@@ -196,8 +196,8 @@ const Dashboard = () => {
             {recentBookings.map((booking) => (
               <tr key={booking._id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{booking.bookingId}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.userId.name}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.venueId.name}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.userId?.name}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.venueId?.name}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.venueId.sportsitem}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{new Date(booking.date).toLocaleDateString()}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{booking.bookingStatus}</td>
