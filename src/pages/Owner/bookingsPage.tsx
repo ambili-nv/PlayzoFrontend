@@ -8,7 +8,7 @@ const BookingPage : React.FC = ()=>{
         <>
         <OwnerNavbar/>
         <BookingHistoryPage/>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }
