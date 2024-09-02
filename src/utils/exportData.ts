@@ -20,7 +20,7 @@ export function ownerBookingPdfGenerator(
       ['SL', 'Booking ID', 'User Name', 'Venue Name', 'Sports Item', 'Date', 'Slot Time', 'Booking Status', 'Payment Status', 'Price']
     ];
 
-    const tableData = data.map((d, i) => [
+    const tableData = data?.map((d, i) => [
       i + 1,
       d._id, // Booking ID
       d.userId?.name, // User Name
@@ -53,38 +53,4 @@ export function ownerBookingPdfGenerator(
   }
 }
 
-// export const ownerArrayToExcel = (function () {
-//   const createXMLTable = (table: string, fileName: string) => {
-//     const blob = new Blob([table], { type: 'application/vnd.ms-excel' });
-//     const url = window.URL.createObjectURL(blob);
-//     const a = document.createElement('a');
-//     a.href = url;
-//     a.download = fileName;
-//     a.click();
-//     window.URL.revokeObjectURL(url);
-//   };
 
-//   const convertArrayToTable = (data: ReportInterface[], fileName: string) => {
-//     const headers = ['SL', 'Booking ID', 'User Name', 'Venue Name', 'Sports Item', 'Date', 'Slot Time', 'Booking Status', 'Payment Status', 'Price'];
-//     let table = `<table border='1'><tr>${headers.map(header => `<th>${header}</th>`).join('')}</tr>`;
-//     table += data.map((item, index) => (
-//       `<tr>
-//         <td>${index + 1}</td>
-//         <td>${item._id}</td>
-//         <td>${item.userId.name}</td>
-//         <td>${item.venueId.name}</td>
-//         <td>${item.venueId.sportsitem}</td>
-//         <td>${item.date}</td>
-//         <td>${item.startTime} - ${item.endTime}</td>
-//         <td>${item.bookingStatus}</td>
-//         <td>${item.paymentStatus}</td>
-//         <td>${item.fees}</td>
-//       </tr>`
-//     )).join('');
-//     table += '</table>';
-
-//     createXMLTable(table, fileName);
-//   };
-
-//   return { convertArrayToTable };
-// })();
