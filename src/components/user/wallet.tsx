@@ -181,8 +181,9 @@ const WalletPage: React.FC = () => {
 
       {loading ? (
         <p>Loading...</p>
-      ) : error ? (
-        <p className="text-red-500">{error}</p>
+      // ) 
+      // : error ? (
+      //   <p className="text-red-500">{error}</p>
       ) : (
         <div className="w-full max-w-lg sm:max-w-4xl bg-white rounded-lg shadow-md p-4 sm:p-6">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
