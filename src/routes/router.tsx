@@ -52,7 +52,7 @@ export const MainRouter = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path = "/" element={<Home/>}/>
+        <Route path = "/" element={<UserBook/>}/>
         {/* <Route path = "" element = {<PublicRouteUser/>}> */}
         <Route path = "/book" element={<UserBook/>}/>
         <Route path="/login" element={<UserLogin />} />

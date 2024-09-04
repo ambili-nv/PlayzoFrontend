@@ -32,9 +32,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-gray-700 hover:underline">
+                {/* <Link to="/" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-gray-700 hover:underline">
                   Home
-                </Link>
+                </Link> */}
                 <Link to="/book" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-gray-700 hover:underline">
                   Book
                 </Link>
@@ -84,9 +84,9 @@ const Navbar = () => {
       </div>
       <div className={`${isNavOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link to="/" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-black ">
+          {/* <Link to="/" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-black ">
             Home
-          </Link>
+          </Link> */}
           <Link to="/book" className="text-blcak dark:text-black px-3 py-2 rounded-md text-sm font-medium hover:text-black ">
             Book
           </Link>
