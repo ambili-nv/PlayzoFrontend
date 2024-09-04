@@ -779,7 +779,7 @@ const VenuePage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-8 text-center text-green-700">Venue Details</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md space-y-4">
-              <h2 className="text-3xl font-bold text-gray-800">{venue.name}</h2>
+              <h2 className="text-3xl font-bold text-gray-800">{venue?.name}</h2>
               <div className="border rounded p-4">
                 <p className="text-lg font-semibold">Sport</p>
                 <p className="text-base mt-2 text-slate-600">{venue.sportsitem}</p>
@@ -799,7 +799,7 @@ const VenuePage: React.FC = () => {
                 <div className="relative w-full h-96 flex items-center justify-center">
                   <img
                     src={venue.secondaryImages[currentImageIndex]}
-                    alt={venue.name}
+                    alt={venue?.name}
                     className="w-full h-full object-cover rounded-lg"
                   />
                   {venue.secondaryImages.length > 1 && (
@@ -851,13 +851,13 @@ const VenuePage: React.FC = () => {
                             />
                           ) : ( */}
                             <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 text-lg">
-                              {review.userId.name.charAt(0)}
+                              {review.userId?.name.charAt(0)}
                             </div>
                           {/* )} */}
                         </div>
                         <div className="flex-grow">
                           <div className="flex items-center justify-between">
-                            <h3 className="text-base font-semibold">{review.userId.name}</h3>
+                            <h3 className="text-base font-semibold">{review.userId?.name}</h3>
                             <p className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</p>
                           </div>
                           <div className="flex items-center mt-1">
