@@ -689,7 +689,6 @@ interface Rating {
   comment: string;
   userId: {
     name: string;
-    avatarUrl?: string;
   };
   venueId: string;
   createdAt: string;
@@ -844,17 +843,17 @@ const VenuePage: React.FC = () => {
                     <div key={review._id} className="bg-gray-100 p-3 rounded-lg shadow-sm">
                       <div className="flex items-start">
                         <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-                          {review.userId.avatarUrl ? (
+                          {/* {review.userId.avatarUrl ? (
                             <img
                               src={review.userId.avatarUrl}
                               alt="User Avatar"
                               className="w-full h-full object-cover"
                             />
-                          ) : (
+                          ) : ( */}
                             <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 text-lg">
                               {review.userId.name.charAt(0)}
                             </div>
-                          )}
+                          {/* )} */}
                         </div>
                         <div className="flex-grow">
                           <div className="flex items-center justify-between">
