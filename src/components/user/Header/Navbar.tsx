@@ -5,6 +5,7 @@ import { RootState } from '../../../redux/reducer/reducer';
 import { useSelector, useDispatch } from "react-redux";
 import { clearUser } from "../../../redux/slice/userSlice";
 import showToast from "../../../utils/toaster";
+import logo from '../../../assets/images/logo.png'
 
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/">
-              <img src="src/assets/images/logo.png" alt="Logo" className="h-8 w-auto" />
+              <img src={logo} alt="Logo" className="h-8 w-auto" />
             </Link>
           </div>
           <div className="flex items-center">
