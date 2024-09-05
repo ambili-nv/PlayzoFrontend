@@ -5,6 +5,9 @@ import { loadStripe } from '@stripe/stripe-js';
 import axiosInstance from '../../utils/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import showToast from '../../utils/toaster';
+import { useSelector, UseSelector } from 'react-redux';
+import { RootState } from '../../redux/reducer/reducer';
+
 
 const stripePublicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY;
 
@@ -30,6 +33,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, venueId })
   const [step, setStep] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  const user = useSelector((state: RootState) => state.userSlice);
+
 
   useEffect(() => {
     if (selectedDate) {
@@ -69,6 +75,10 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, venueId })
       setError('Please select a payment method');
       return;
     }
+
+    if(user.isAuthenticated){
+      
+  
 
     if (paymentMethod === 'wallet') {
       try {
@@ -130,6 +140,10 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, venueId })
         setError('Error processing payment');
       }
     }
+  } else {
+    showToast("Please Login to continue booking","error")
+    navigate("/login")
+  }
   };
 
   if (!isOpen) return null;
@@ -245,3 +259,4 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, venueId })
 };
 
 export default BookingModal;
+

@@ -8,7 +8,7 @@ export const ProtectRoute:FC=()=>{
     return isAuthenticated && role === 'user'? (
         <Outlet/>
     ) :(
-        <Navigate to = {'/'} replace/> 
+        <Navigate to = {'/login'} replace/> 
     )
 };
 
