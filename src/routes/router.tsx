@@ -53,6 +53,8 @@ export const MainRouter = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path = "/" element={<UserBook/>}/>
+        <Route path="/single-venue/:venueId" element={<SingleVenuePage/>}/>
+        <Route path="/contact" element={<ContactUS/>}/>
         <Route path = "" element = {<PublicRouteUser/>}>
         <Route path = "/book" element={<UserBook/>}/>
         <Route path="/login" element={<UserLogin />} />
@@ -60,8 +62,6 @@ export const MainRouter = () => {
         <Route path="/otp" element={<UserOTP/>}/>
         <Route path="/forgot-password" element={<ForgotPassword/>}/>
         <Route path="/reset-password/:id" element={<ResetPassword/>}/>
-        <Route path="/single-venue/:venueId" element={<SingleVenuePage/>}/>
-        <Route path="/contact" element={<ContactUS/>}/>
         </Route>
 
         <Route path = "" element = {<ProtectRoute/>}>

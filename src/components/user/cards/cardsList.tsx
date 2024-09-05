@@ -6,6 +6,7 @@ import showToast from '../../../utils/toaster';
 import { USER_API } from '../../../constants';
 import useUserLocation from '../../../hooks/useUserLocation'; // Import the custom hook
 import StarRating from './starRating'; // Import the StarRating component
+import LoadingSpinner from '../../../pages/User/loading';
 
 interface Venue {
   _id: string;
@@ -73,7 +74,9 @@ const Card: React.FC<CardProps> = ({ searchQuery, limit }) => {
     fetchVenues();
   }, [userLocation, maxDistance, permissionDenied]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading){
+    <LoadingSpinner/>
+  }
   if (error) return <div>{error}</div>;
 
   const filteredVenues = venues.filter((venue) =>
