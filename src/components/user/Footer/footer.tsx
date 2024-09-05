@@ -1,11 +1,11 @@
 import React from 'react';
-
+import logo from '../../../assets/images/logo.png'
 const Footer = () => {
   return (
     <footer className="bg-green-900 text-white py-6 mt-5">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img src="src/assets/images/logo.png" alt="playZo" className="h-8 ml-5" />
+          <img src={logo} alt="playZo" className="h-8 ml-5" />
           {/* <span className="text-lg font-semibold">playZo</span> */}
         </div>
         <ul className="flex space-x-6 mt-4 md:mt-0 mr-5">

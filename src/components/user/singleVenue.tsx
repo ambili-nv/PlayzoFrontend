@@ -98,7 +98,7 @@
 //   if (error) return <div>{error}</div>;
 
 //   return (
-    
+
 //     <div className="container mx-auto px-4 py-8 mt-12 bg-gray-100">
 //       {venue ? (
 //         <>
@@ -178,7 +178,7 @@
 //             isOpen={isBookingModalOpen}
 //             onClose={() => setIsBookingModalOpen(false)}
 //             venueId={venue._id}
-            
+
 //           />
 //         </>
 //       ) : (
@@ -363,17 +363,9 @@ const VenuePage: React.FC = () => {
                     <div key={review._id} className="bg-gray-100 p-3 rounded-lg shadow-sm">
                       <div className="flex items-start">
                         <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-                          {/* {review.userId.avatarUrl ? (
-                            <img
-                              src={review.userId.avatarUrl}
-                              alt="User Avatar"
-                              className="w-full h-full object-cover"
-                            />
-                          ) : ( */}
-                            <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 text-lg">
-                              {review.userId?.name.charAt(0)}
-                            </div>
-                          {/* )} */}
+                          <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-600 text-lg">
+                            {review.userId?.name.charAt(0)}
+                          </div>
                         </div>
                         <div className="flex-grow">
                           <div className="flex items-center justify-between">
@@ -402,21 +394,27 @@ const VenuePage: React.FC = () => {
                 <p className="ml-2 text-lg text-gray-600">({calculateAverageRating()} out of 5)</p>
               </div>
               <p className="text-center text-gray-500">{ratings.length} reviews</p>
-              <div className="mt-4">
-                {[5, 4, 3, 2, 1].map((star) => (
-                  <div key={star} className="flex items-center my-2">
-                    <p className="w-8 text-sm text-gray-600">{star} star</p>
-                    <div className="flex-grow h-3 bg-gray-200 rounded-full mx-2">
-                      <div
-                        className="h-full bg-green-500 rounded-full"
-                        style={{ width: `${calculatePercentage(getStarCount(star))}%` }}
-                      />
+
+              {ratings.length > 0 ? (
+                <div className="mt-4">
+                  {[5, 4, 3, 2, 1].map((star) => (
+                    <div key={star} className="flex items-center my-2">
+                      <p className="w-8 text-sm text-gray-600">{star} star</p>
+                      <div className="flex-grow h-3 bg-gray-200 rounded-full mx-2">
+                        <div
+                          className="h-full bg-green-500 rounded-full"
+                          style={{ width: `${calculatePercentage(getStarCount(star))}%` }}
+                        />
+                      </div>
+                      <p className="w-6 text-sm text-gray-600">{getStarCount(star)}</p>
                     </div>
-                    <p className="w-6 text-sm text-gray-600">{getStarCount(star)}</p>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-center text-gray-500">No reviews yet.</p> // Display message if no reviews
+              )}
             </div>
+
           </div>
 
           {isBookingModalOpen && venue && (

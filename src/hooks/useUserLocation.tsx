@@ -43,7 +43,6 @@
 
 
 
-
 import { useState, useEffect } from 'react';
 
 interface Location {
@@ -72,8 +71,8 @@ const useUserLocation = () => {
           },
           (err) => {
             if (err.code === err.PERMISSION_DENIED) {
-              setPermissionDenied(true); // Set permission denied flag
-              setError('Location access denied. Displaying default venues.');
+              setPermissionDenied(true);
+              setError('Location access denied. Please enter your city.');
             } else {
               setError('Failed to retrieve location.');
             }
